@@ -2,9 +2,16 @@ const express = require("express");
 
 const app = express();
 
-// Request handler
-app.use("/test", (req, res) => {
-  res.send("hello from the server");
+app.get("/user", (req, res) => {
+  console.log(req.query);
+  res.send({ firstName: "Subha", lastName: "Roy" });
+});
+
+// Dynamic route
+// ':' means dynamic
+app.get("/user/:userId/:name", (req, res) => {
+  console.log(req.params);
+  res.send({ firstName: "Subha", lastName: "Roy" });
 });
 
 app.listen(3001, () => {
