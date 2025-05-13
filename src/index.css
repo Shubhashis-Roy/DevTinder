@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .input-style {
+  @apply w-full my-3 pb-2 bg-transparent border-b border-white text-white placeholder-white focus:outline-none focus:ring-0 focus:border-pink-600;
+} */
